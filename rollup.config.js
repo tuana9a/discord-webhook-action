@@ -9,13 +9,13 @@ const config = {
     {
       esModule: true,
       file: "dist/index.js",
-      format: "es",
+      format: "cjs",
       sourcemap: true,
     },
     {
       esModule: true,
       file: "dist/index.min.js",
-      format: "iife",
+      format: "cjs",
       sourcemap: true,
       plugins: [minify()],
     },
