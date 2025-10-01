@@ -30,5 +30,5 @@ Response from discord server.
 uses: tuana9a/discord-webhook-action@dev
 with:
   webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-  content: ${{ secrets.DISCORD_WEBHOOK }}
+  content: ${{ env.MSG }}
 ```

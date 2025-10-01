@@ -13,13 +13,14 @@ try {
   core.debug(`content: ${content}`);
   core.debug(`payload: ${payload}`);
 
-  const response = await axios.post(webhookUrl, payload, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  core.setOutput("response", response.data)
+  axios
+    .post(webhookUrl, payload, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => core.setOutput("response", response.data))
+    .catch((error) => core.setFailed(error.message));
 } catch (error) {
   core.setFailed(error.message);
 }
