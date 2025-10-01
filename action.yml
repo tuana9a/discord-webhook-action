@@ -1,0 +1,20 @@
+name: discord-webhook-action
+description: Send discord webhook with github action
+
+inputs:
+  webhook-url:
+    description: discord webhook url
+    required: true
+  content:
+    required: true
+    description: content
+
+outputs:
+  timestamp:
+    description: timestamp
+  response:
+    description: json response from discord server
+
+runs:
+  using: node20
+  main: dist/index.js
