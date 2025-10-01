@@ -46415,7 +46415,7 @@ function requireSrc () {
 	  const payload = JSON.stringify(body);
 
 	  core.setOutput("timestamp", timestamp);
-	  core.debug(`webhookUrl: ${nameToGreet}`);
+	  core.debug(`webhookUrl: ${webhookUrl}`);
 	  core.debug(`content: ${content}`);
 	  core.debug(`payload: ${payload}`);
 
